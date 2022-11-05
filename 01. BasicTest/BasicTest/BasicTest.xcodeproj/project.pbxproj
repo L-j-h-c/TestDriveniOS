@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		EBEF1F6C291661C700D7E9AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF1F6B291661C700D7E9AD /* SceneDelegate.swift */; };
 		EBEF1F73291661C800D7E9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBEF1F72291661C800D7E9AD /* Assets.xcassets */; };
 		EBEF1F76291661C800D7E9AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBEF1F74291661C800D7E9AD /* LaunchScreen.storyboard */; };
-		EBEF1F81291661C900D7E9AD /* BasicTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF1F80291661C900D7E9AD /* BasicTestTests.swift */; };
 		EBEF1F8B291661C900D7E9AD /* BasicTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF1F8A291661C900D7E9AD /* BasicTestUITests.swift */; };
 		EBEF1F8D291661C900D7E9AD /* BasicTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF1F8C291661C900D7E9AD /* BasicTestUITestsLaunchTests.swift */; };
 		EBEF1FA22916654700D7E9AD /* RDDateTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF1F9E2916654700D7E9AD /* RDDateTimePickerView.swift */; };
@@ -67,6 +66,12 @@
 		EBEF200A29166E8100D7E9AD /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF1FE229166E8100D7E9AD /* ViewModelType.swift */; };
 		EBEF200B29166E8100D7E9AD /* UITableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF1FE329166E8100D7E9AD /* UITableViewRegisterable.swift */; };
 		EBEF2013291673DF00D7E9AD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF2012291673DF00D7E9AD /* RootViewController.swift */; };
+		EBEF2018291677F500D7E9AD /* MyPageUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF2017291677F500D7E9AD /* MyPageUseCaseTest.swift */; };
+		EBEF201B2916783F00D7E9AD /* MockMyPageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF201A2916783F00D7E9AD /* MockMyPageRepository.swift */; };
+		EBEF201D291678BB00D7E9AD /* MyPageViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF201C291678BB00D7E9AD /* MyPageViewModelTest.swift */; };
+		EBEF201F29167D1800D7E9AD /* sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF201E29167D1800D7E9AD /* sample.swift */; };
+		EBEF2021291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF2020291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift */; };
+		EBEF20232916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF20222916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift */; };
 		F5470298F0ABEE0C80F56D69 /* Pods_BasicTest_BasicTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106025D097ECC96634A2699C /* Pods_BasicTest_BasicTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,7 +109,6 @@
 		EBEF1F75291661C800D7E9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBEF1F77291661C800D7E9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBEF1F7C291661C900D7E9AD /* BasicTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBEF1F80291661C900D7E9AD /* BasicTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTestTests.swift; sourceTree = "<group>"; };
 		EBEF1F86291661C900D7E9AD /* BasicTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEF1F8A291661C900D7E9AD /* BasicTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTestUITests.swift; sourceTree = "<group>"; };
 		EBEF1F8C291661C900D7E9AD /* BasicTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -159,6 +163,12 @@
 		EBEF1FE229166E8100D7E9AD /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EBEF1FE329166E8100D7E9AD /* UITableViewRegisterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewRegisterable.swift; sourceTree = "<group>"; };
 		EBEF2012291673DF00D7E9AD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		EBEF2017291677F500D7E9AD /* MyPageUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUseCaseTest.swift; sourceTree = "<group>"; };
+		EBEF201A2916783F00D7E9AD /* MockMyPageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyPageRepository.swift; sourceTree = "<group>"; };
+		EBEF201C291678BB00D7E9AD /* MyPageViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModelTest.swift; sourceTree = "<group>"; };
+		EBEF201E29167D1800D7E9AD /* sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample.swift; sourceTree = "<group>"; };
+		EBEF2020291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUseCaseTestWithNimble.swift; sourceTree = "<group>"; };
+		EBEF20222916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUseCaseTestWithRxNimble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +264,8 @@
 		EBEF1F7F291661C900D7E9AD /* BasicTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBEF1F80291661C900D7E9AD /* BasicTestTests.swift */,
+				EBEF201E29167D1800D7E9AD /* sample.swift */,
+				EBEF2015291677B500D7E9AD /* MyPage */,
 			);
 			path = BasicTestTests;
 			sourceTree = "<group>";
@@ -448,6 +459,43 @@
 				EBEF1FAC29166CAE00D7E9AD /* MyPageRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		EBEF2014291677B100D7E9AD /* UseCaseTest */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF2017291677F500D7E9AD /* MyPageUseCaseTest.swift */,
+				EBEF2020291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift */,
+				EBEF20222916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift */,
+			);
+			name = UseCaseTest;
+			path = ../UseCaseTest;
+			sourceTree = "<group>";
+		};
+		EBEF2015291677B500D7E9AD /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF20192916780F00D7E9AD /* Mock */,
+				EBEF2014291677B100D7E9AD /* UseCaseTest */,
+				EBEF2016291677D500D7E9AD /* ViewModelTest */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		EBEF2016291677D500D7E9AD /* ViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF201C291678BB00D7E9AD /* MyPageViewModelTest.swift */,
+			);
+			path = ViewModelTest;
+			sourceTree = "<group>";
+		};
+		EBEF20192916780F00D7E9AD /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF201A2916783F00D7E9AD /* MockMyPageRepository.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -766,7 +814,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBEF1F81291661C900D7E9AD /* BasicTestTests.swift in Sources */,
+				EBEF2018291677F500D7E9AD /* MyPageUseCaseTest.swift in Sources */,
+				EBEF2021291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift in Sources */,
+				EBEF201F29167D1800D7E9AD /* sample.swift in Sources */,
+				EBEF201D291678BB00D7E9AD /* MyPageViewModelTest.swift in Sources */,
+				EBEF20232916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift in Sources */,
+				EBEF201B2916783F00D7E9AD /* MockMyPageRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

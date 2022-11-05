@@ -3,12 +3,12 @@
 //  PresentationTests
 //
 //  Created by Junho Lee on 2022/10/09.
-//  Copyright © 2022 RecorDream. All rights reserved.
+//  Copyright © 2022 BasicTest. All rights reserved.
 //
 
 import Foundation
 
-public struct MyPageEntity {
+public struct MyPageEntity: Equatable {
     public let userName: String
     public let email: String
     public let pushOnOff: Bool

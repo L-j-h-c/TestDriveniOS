@@ -16,6 +16,7 @@ target 'BasicTest' do
     pod 'RxBlocking', '6.5.0'
     pod 'RxTest', '6.5.0'
     pod 'Quick'
+    pod 'RxNimble', subspecs: ['RxBlocking', 'RxTest']
     pod 'Nimble'
   end
 

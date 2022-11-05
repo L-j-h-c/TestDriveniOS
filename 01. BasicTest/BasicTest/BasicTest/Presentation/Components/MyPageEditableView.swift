@@ -3,7 +3,7 @@
 //  RD-DSKit
 //
 //  Created by Junho Lee on 2022/11/03.
-//  Copyright © 2022 RecorDream. All rights reserved.
+//  Copyright © 2022 BasicTest. All rights reserved.
 //
 
 import UIKit
