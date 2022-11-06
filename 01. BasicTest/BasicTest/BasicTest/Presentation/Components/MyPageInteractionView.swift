@@ -114,6 +114,7 @@ extension MyPageInteractionView {
             self.titleLabel.text = "시간 설정"
             self.pushSwitch.isHidden = true
             self.timeLabel.isHidden = false
+            self.updateEnabledStatus(false)
         }
         return self
     }
@@ -125,12 +126,33 @@ extension MyPageInteractionView {
         timeLabel.text = isEnabled ? timeLabel.text : "AM 00:00"
         timeLabel.isHidden = !isEnabled
     }
+    
+    public func updatePushTime(pushTime: String?) {
+        guard let time = pushTime else {
+            self.updateEnabledStatus(false)
+            return
+        }
+        self.updateEnabledStatus(true)
+        self.timeLabel.text = time
+    }
 }
 
 extension Reactive where Base: MyPageInteractionView {
     public var isInteractionEnabled: Binder<Bool> {
         return Binder(base) { view, isEnabled in
             view.updateEnabledStatus(isEnabled)
+        }
+    }
+    
+    public var pushTimeSelected: Binder<String?> {
+        return Binder(base) { view, pushTime in
+            view.updatePushTime(pushTime: pushTime)
+        }
+    }
+    
+    public var pushSwitchIsOnBindable: Binder<Bool> {
+        return Binder(base) { view, isOn in
+            view.pushSwitch.setOn(isOn, animated: true)
         }
     }
     

@@ -40,6 +40,7 @@ public class MyPageViewModel: ViewModelType {
         var showAlert = PublishRelay<Void>()
         var usernameEditCompleted = PublishRelay<Bool>()
         var loadingStatus = BehaviorRelay<Bool>(value: true)
+        var selectedPushTime = PublishRelay<String?>()
     }
     
     // MARK: - Coordination
@@ -68,7 +69,7 @@ extension MyPageViewModel {
             case .noText:
                 self.useCase.restartUsernameEdit()
             case .endWithProperText(let text):
-                // TODO: - 로딩 화면 보여주기
+                output.loadingStatus.accept(true)
                 self.useCase.editUsername(username: text)
             }
         }).disposed(by: disposeBag)
@@ -77,12 +78,14 @@ extension MyPageViewModel {
             self.useCase.startUsernameEdit()
         }.disposed(by: disposeBag)
         
-        input.pushSwitchChagned.subscribe(onNext: { _ in
-            
+        input.pushSwitchChagned
+            .filter { $0 == false }
+            .subscribe(onNext: { _ in
+                self.useCase.disablePushNotice()
         }).disposed(by: disposeBag)
         
-        input.pushTimePicked.subscribe(onNext: { _ in
-            
+        input.pushTimePicked.subscribe(onNext: { selectedTime in
+            self.useCase.enablePushNotice(time: selectedTime)
         }).disposed(by: disposeBag)
         
         input.logoutButtonTapped.subscribe(onNext: { _ in
@@ -129,6 +132,13 @@ extension MyPageViewModel {
             .bind {
                 output.loadingStatus.accept(false)
                 self.withdrawlCompleted.accept(())
+            }.disposed(by: disposeBag)
+        
+        let pushUpdateSuccess = self.useCase.updatePushSuccess
+        pushUpdateSuccess
+            .bind { selectedTime in
+                output.loadingStatus.accept(false)
+                output.selectedPushTime.accept(selectedTime)
             }.disposed(by: disposeBag)
     }
 }

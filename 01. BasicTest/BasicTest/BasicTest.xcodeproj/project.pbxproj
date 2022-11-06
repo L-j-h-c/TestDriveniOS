@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -72,6 +72,7 @@
 		EBEF201F29167D1800D7E9AD /* sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF201E29167D1800D7E9AD /* sample.swift */; };
 		EBEF2021291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF2020291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift */; };
 		EBEF20232916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF20222916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift */; };
+		EBEF20252917849700D7E9AD /* MockMyPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF20242917849700D7E9AD /* MockMyPageUseCase.swift */; };
 		F5470298F0ABEE0C80F56D69 /* Pods_BasicTest_BasicTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106025D097ECC96634A2699C /* Pods_BasicTest_BasicTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +170,7 @@
 		EBEF201E29167D1800D7E9AD /* sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample.swift; sourceTree = "<group>"; };
 		EBEF2020291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUseCaseTestWithNimble.swift; sourceTree = "<group>"; };
 		EBEF20222916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUseCaseTestWithRxNimble.swift; sourceTree = "<group>"; };
+		EBEF20242917849700D7E9AD /* MockMyPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyPageUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				EBEF201A2916783F00D7E9AD /* MockMyPageRepository.swift */,
+				EBEF20242917849700D7E9AD /* MockMyPageUseCase.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				EBEF201D291678BB00D7E9AD /* MyPageViewModelTest.swift in Sources */,
 				EBEF20232916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift in Sources */,
 				EBEF201B2916783F00D7E9AD /* MockMyPageRepository.swift in Sources */,
+				EBEF20252917849700D7E9AD /* MockMyPageUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
