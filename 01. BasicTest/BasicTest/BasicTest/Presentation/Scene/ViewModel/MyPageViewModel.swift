@@ -14,12 +14,15 @@ public class MyPageViewModel: ViewModelType {
     private let useCase: MyPageUseCase
     private let disposeBag = DisposeBag()
     
+    var input: MyPageViewModel.Input?
+    var output: MyPageViewModel.Output?
+    
     // MARK: - Inputs
     
     public struct Input {
         let viewDidLoad: Observable<Void>
         let editButtonTapped: Observable<Void>
-        let myPageReturnOutput: Observable<MyPageEditableView.EndEditOutput>
+        let usernameEditOutput: Observable<MyPageEditableView.EndEditOutput>
         let usernameAlertDismissed: Observable<Void>
         let pushSwitchChagned: Observable<Bool>
         let pushTimePicked: Observable<String>
@@ -54,6 +57,9 @@ extension MyPageViewModel {
     public func transform(from input: Input, disposeBag: DisposeBag) -> Output {
         let output = Output()
         
+        self.input = input
+        self.output = output
+        
         self.bindOutput(output: output, disposeBag: disposeBag)
         
         input.viewDidLoad.subscribe(onNext: { _ in
@@ -64,7 +70,7 @@ extension MyPageViewModel {
             self.useCase.validateUsernameEdit()
         }).disposed(by: disposeBag)
         
-        input.myPageReturnOutput.subscribe(onNext: { editOutput in
+        input.usernameEditOutput.subscribe(onNext: { editOutput in
             switch editOutput {
             case .noText:
                 self.useCase.restartUsernameEdit()
@@ -103,7 +109,7 @@ extension MyPageViewModel {
         let myPageData = self.useCase.myPageFetched
         myPageData
             .compactMap { $0 }
-            .subscribe(onNext: { entity in
+            .bind(onNext: { entity in
                 output.myPageDataFetched.accept(entity)
             }).disposed(by: disposeBag)
         

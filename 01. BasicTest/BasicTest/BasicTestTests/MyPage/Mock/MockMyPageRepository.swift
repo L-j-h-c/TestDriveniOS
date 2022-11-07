@@ -12,6 +12,14 @@ import RxSwift
 @testable import BasicTest
 
 final class MockMyPageRepository: MyPageRepository {
+    func enablePushNotice(time: String) -> Observable<String> {
+        return Observable.just("AM 07:30")
+    }
+    
+    func disablePushNotice() -> Observable<Void> {
+        return Observable.just(())
+    }
+    
     func fetchUserInformation() -> Observable<MyPageEntity> {
         return Observable.just(Self.sampleFetchedData)
     }

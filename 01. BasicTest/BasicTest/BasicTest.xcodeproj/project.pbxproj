@@ -73,6 +73,7 @@
 		EBEF2021291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF2020291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift */; };
 		EBEF20232916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF20222916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift */; };
 		EBEF20252917849700D7E9AD /* MockMyPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF20242917849700D7E9AD /* MockMyPageUseCase.swift */; };
+		EBEF20292917F41700D7E9AD /* VoidEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF20282917F41700D7E9AD /* VoidEqual.swift */; };
 		F5470298F0ABEE0C80F56D69 /* Pods_BasicTest_BasicTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106025D097ECC96634A2699C /* Pods_BasicTest_BasicTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +172,7 @@
 		EBEF2020291682E900D7E9AD /* MyPageUseCaseTestWithNimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUseCaseTestWithNimble.swift; sourceTree = "<group>"; };
 		EBEF20222916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUseCaseTestWithRxNimble.swift; sourceTree = "<group>"; };
 		EBEF20242917849700D7E9AD /* MockMyPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyPageUseCase.swift; sourceTree = "<group>"; };
+		EBEF20282917F41700D7E9AD /* VoidEqual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidEqual.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 		EBEF1F7F291661C900D7E9AD /* BasicTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBEF20272917F3F800D7E9AD /* Global */,
 				EBEF201E29167D1800D7E9AD /* sample.swift */,
 				EBEF2015291677B500D7E9AD /* MyPage */,
 			);
@@ -499,6 +502,14 @@
 				EBEF20242917849700D7E9AD /* MockMyPageUseCase.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		EBEF20272917F3F800D7E9AD /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF20282917F41700D7E9AD /* VoidEqual.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -823,6 +834,7 @@
 				EBEF201D291678BB00D7E9AD /* MyPageViewModelTest.swift in Sources */,
 				EBEF20232916830C00D7E9AD /* MyPageUseCaseTestWithRxNimble.swift in Sources */,
 				EBEF201B2916783F00D7E9AD /* MockMyPageRepository.swift in Sources */,
+				EBEF20292917F41700D7E9AD /* VoidEqual.swift in Sources */,
 				EBEF20252917849700D7E9AD /* MockMyPageUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

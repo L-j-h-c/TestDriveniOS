@@ -238,7 +238,7 @@ extension MyPageVC {
     private func bindViewModels() {
         let input = MyPageViewModel.Input(viewDidLoad: Observable.just(()),
                                           editButtonTapped: editButton.rx.tap.asObservable(),
-                                          myPageReturnOutput: myPageEditableView.endEditingWithText.asObservable(),
+                                          usernameEditOutput: myPageEditableView.endEditingWithText.asObservable(),
                                           usernameAlertDismissed: usernameAlertDismissed.asObservable(),
                                           pushSwitchChagned: pushSettingView.rx.pushSwitchIsOn.asObservable(),
                                           pushTimePicked: timePickerView.rx.saveButtonTapped,
