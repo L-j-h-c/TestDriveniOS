@@ -1,15 +1,13 @@
-name: Swift
+name: Run Test
 
-on: [push]
+on:
+  [push]
 
 jobs:
   build:
-
     runs-on: macos-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - uses: actions/checkout@v2
+    - name: Start xcode build
+      run: |
+        xcodebuild clean test -project 01. BasicTest/BasicTest/BasicTest.xcodeproj -scheme BasicTest -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.0'
