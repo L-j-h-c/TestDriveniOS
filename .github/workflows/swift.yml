@@ -1,0 +1,13 @@
+name: Run Test
+
+on:
+  [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Start xcode build
+      run: |
+        xcodebuild clean test -project 01.BasicTest/BasicTest/BasicTest.xcworkspace -scheme BasicTestTests -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.0'
